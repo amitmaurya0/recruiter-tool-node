@@ -25,15 +25,15 @@ candidates.getCandidateDetail = async (req, res) => {
 candidates.saveDetails = async (req, res) => {
     try {
         const { candidateId } = req.params;
-        const { name, email, phone, highestEducation, nodeExperience, reactExperience, currentStatus, comment, skillIds } = req.body;
+        const { name, email, phone, expectedSalary, highestEducation, nodeExperience, reactExperience, currentStatus, comment, skillIds } = req.body;
         //validate a valid name, email and phone
         validateUser(name, email, phone);
         
-        const data = { name, email, phone, highestEducation, nodeExperience, reactExperience, currentStatus, comment }
+        const data = { name, email, phone, expectedSalary, highestEducation, nodeExperience, reactExperience, currentStatus, comment }
         console.log(candidateId);
         if(!!candidateId) {
             console.log("Inside update", candidateId)
-            const fields = ['name', 'email', 'phone', 'highestEducation', 'nodeExperience', 'reactExperience', 'currentStatus', 'comment']
+            const fields = ['name', 'email', 'phone', 'expectedSalary', 'highestEducation', 'nodeExperience', 'reactExperience', 'currentStatus', 'comment']
             const resp = CandidateService.update(candidateId, data, fields);
             const skillResp = CandidateService.insertSkills(skillIds, candidateId);
             res.json({ status: true, message: 'Candidate updated successfully.' })

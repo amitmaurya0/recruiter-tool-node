@@ -29,7 +29,6 @@ CandidateService.getCandidate = async (candidateId) => {
                 );
              const details = data.toJSON();
             const candidateScore = calculateScore(details.nodeExperience, details.reactExperience);
-            console.log("candidateScore==>", candidateScore);
             return {
                 ...details,
                 candidateSkills,
