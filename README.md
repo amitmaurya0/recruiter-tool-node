@@ -6,7 +6,6 @@ Brief description of your project.
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
 - [Configuration](#configuration)
 
 ## Getting Started
@@ -37,10 +36,11 @@ Before you begin, ensure you have met the following requirements:
     ```bash
     npm install
     ```
+4. Start the project:
 
-## Usage
-
-Describe how to use your application. Include examples, screenshots, or any relevant information.
+    ```bash
+    npm start
+    ```
 
 ## Configuration
 
