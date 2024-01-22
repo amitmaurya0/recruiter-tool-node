@@ -1,3 +1,3 @@
 [build]
-  command = "npm run build"
-  publish = "dist" # Change t
+  command = "npm run build"  # Adjust based on your project's build script
+  publish = "dist"           # Adjust based on your project's build output

@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm install"
+    "build": "npm run lint && npm run transpile",
+    "lint": "eslint src",
+    "transpile": "babel src -d dist"
   },
   "keywords": [],
   "author": "",
@@ -21,5 +23,10 @@
     "pg": "^8.11.3",
     "sequelize": "^4.44.4",
     "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.56.0"
   }
 }
